@@ -2,12 +2,69 @@
 <html>
 <head>
   <title>User Information</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-item i {
+      font-size: 24px;
+      color: #4CAF50;
+      margin-right: 15px;
+    }
+
+    .info-item p {
+      flex: 1;
+      font-size: 18px;
+      color: #555;
+      margin: 0;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <h1>User Information</h1>
-  <p>Name: {{ name }}</p>
-  <p>Email: {{ email }}</p>
-  <p>Age: {{ age }}</p>
-  <p>Gender: {{ gender }}</p>
+  <div class="container">
+    <h1>User Information</h1>
+    <div class="info-item">
+      <i class="fas fa-user"></i>
+      <p>Name: {{ name }}</p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-envelope"></i>
+      <p>Email: {{ email }}</p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-birthday-cake"></i>
+      <p>Age: {{ age }}</p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-venus-mars"></i>
+      <p>Gender: {{ gender }}</p>
+    </div>
+  </div>
 </body>
 </html>
